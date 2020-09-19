@@ -10,8 +10,9 @@ public class HashMapLearning {
     public HashMapLearning() {
         h.put(1, "penny");
         h.put(10, "dime");
-        h.put(50, "half-dollar");
         h.put(25, "quarter");
+        h.put(50, "half-dollar");
+
     }
 
     public String getName(int i) {

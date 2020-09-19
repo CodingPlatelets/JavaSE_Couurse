@@ -45,7 +45,11 @@ public class Circle
     public void makeInvisible()
     {
         erase();
-        isVisible = false;
+        if (isVisible = false) {
+            isVisible = true;
+        } else {
+            isVisible = false;
+        }
     }
 
     /**
