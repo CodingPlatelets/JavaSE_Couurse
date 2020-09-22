@@ -43,12 +43,12 @@ public class SunSetAndSunRise {
         p.draw();
     }
 
-    public void SunRise(){
+    public void sunRise(){
         sun.slowMoveVertical(-175);
         sun.slowMoveHorizontal(125);
     }
 
-    public void SunSet() {
+    public void sunSet() {
         sun.slowMoveHorizontal(125);
         sun.slowMoveVertical(175);
     }
@@ -62,7 +62,7 @@ public class SunSetAndSunRise {
         System.out.println("Would you want to rise the sun? (Y/F)");
         judge = sc.next();
         if(judge.equals("Y")) {
-            s.SunRise();
+            s.sunRise();
         }else{
             System.out.println("Well!");
         }
@@ -70,7 +70,7 @@ public class SunSetAndSunRise {
         System.out.println("Would you want to set the sun? (Y/F)");
         judge = sc.next();
         if(judge.equals("Y")) {
-            s.SunSet();
+            s.sunSet();
         }else{
             System.out.println("Well!");
         }
