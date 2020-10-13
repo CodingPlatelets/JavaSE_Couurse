@@ -8,6 +8,7 @@ public class TicketMachine {
     private double balance;
     private double amount;
     private int tag;
+    //    private double ran;
     Scanner sc = new Scanner(System.in);
 
     public TicketMachine(int a, int b, int c) {
@@ -15,6 +16,7 @@ public class TicketMachine {
         price.add(b);
         price.add(c);
     }
+
 
     public void setPrice(ArrayList<Integer> price) {
         this.price = price;
@@ -73,9 +75,10 @@ public class TicketMachine {
         System.out.println("Please choose one:");
         int ta = 1;
         ta = sc.nextInt();
-        if(!setTag(ta)){
+        if (!setTag(ta)) {
             return false;
-        };
+        }
+        ;
         getPrice();
         return true;
     }
@@ -103,14 +106,14 @@ public class TicketMachine {
             System.out.println("Thank you. Here is your ticket.");
         } else {
             amount = Math.abs(money - price.get(tag - 1));
-            System.out.println("Here is your refund: "+ amount + " yuan");
+            System.out.println("Here is your refund: " + amount + " yuan");
         }
     }
 
     public static void main(String[] args) {
         TicketMachine t = new TicketMachine(100, 200, 300);
         Scanner in = new Scanner(System.in);
-        if(!t.printTicket()){
+        if (!t.printTicket()) {
             System.exit(1);
         }
         double money = 0.0;
