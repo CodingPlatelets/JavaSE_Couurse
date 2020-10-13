@@ -36,19 +36,21 @@ public class NoteBook {
     public String search(int a) {
         int size = book.size();
         if (a - 1 >= size || a - 1 < 0) {
+            System.out.println("ERROR");
             return "ERROR";
         } else {
+            System.out.println(book.get(a-1));
             return book.get(a - 1);
         }
     }
 
-    public boolean search(String s) {
+    public int search(String s) {
         if (book.contains(s)) {
             System.out.println(book.indexOf(s) + 1);
-            return true;
+            return book.indexOf(s) + 1;
         } else {
             System.out.println("Doesn't have this one!");
-            return false;
+            return -1;
         }
     }
 
@@ -59,6 +61,6 @@ public class NoteBook {
         notebook.add("ghi");
 //        notebook.delete("abc");
         notebook.getBook();
-        notebook.search("abc");
+        notebook.search(0);
     }
 }
