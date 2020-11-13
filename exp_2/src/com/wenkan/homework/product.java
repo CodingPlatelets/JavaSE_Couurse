@@ -1,6 +1,6 @@
 package com.wenkan.homework;
 
-public class products {
+public class product {
     private int id;
     private String name;
     private int stock;
@@ -11,13 +11,13 @@ public class products {
         return (id + ": "+name+" -- " + stock);
     }
 
-    public products(int id, String name, int stock) {
+    public product(int id, String name, int stock) {
         this.id = id;
         this.name = name;
         this.stock = stock;
     }
 
-    public products() {
+    public product() {
     }
 
     public int getId() {

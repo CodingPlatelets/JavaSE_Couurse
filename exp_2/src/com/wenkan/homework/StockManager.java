@@ -1,14 +1,11 @@
 package com.wenkan.homework;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 
-//@Test
 public class StockManager {
-    ArrayList<products> list = new ArrayList<>();
+    ArrayList<product> list = new ArrayList<>();
 
-    public void addProduct(products p) {
+    public void addProduct(product p) {
         for (int i = 0; i < list.toArray().length; i++) {
             if (p.getId() == list.get(i).getId()) {
                 System.out.println("不能添加");
@@ -19,12 +16,12 @@ public class StockManager {
     }
 
     public void printProductDetails() {
-        for (products products : list) {
-            System.out.println(products);
+        for (product product : list) {
+            System.out.println(product);
         }
     }
 
-    public products findProduct(int id) {
+    public product findProduct(int id) {
         for (int i = 0; i < list.toArray().length; i++) {
             if (id == list.get(i).getId()) {
                 System.out.println(list.get(i));
@@ -66,7 +63,7 @@ public class StockManager {
         return l;
     }
 
-    public products findProductByName(String s) {
+    public product findProductByName(String s) {
         for (int i = 0; i < list.toArray().length; i++) {
             if (s.equals(list.get(i).getName())) {
                 return list.get(i);

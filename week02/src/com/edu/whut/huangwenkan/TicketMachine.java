@@ -72,14 +72,14 @@ public class TicketMachine {
     public Boolean printTicket() {
         System.out.println("Here are the prices:");
         System.out.println(getAll());
-        System.out.println("Please choose one:");
+        System.out.println("Please choose one: (1 or 2 or 3)");
         int ta = 1;
         ta = sc.nextInt();
         if (!setTag(ta)) {
             return false;
         }
-        ;
-        getPrice();
+        System.out.println(getPrice());
+        System.out.println("Please insert your money: ");
         return true;
     }
 
@@ -102,12 +102,29 @@ public class TicketMachine {
     }
 
     private void refund(double money) {
-        if (money == price.get(tag - 1)) {
-            System.out.println("Thank you. Here is your ticket.");
-        } else {
-            amount = Math.abs(money - price.get(tag - 1));
+//        if (money == price.get(tag - 1)) {
+//            System.out.println("Thank you. Here is your ticket.");
+//            System.out.println("=======TICKET========\n" +
+//                    "\tprice"+getPrice()+"\t"+
+//                    "\nWelcome Back! ");
+//        } else {
+//            amount = Math.abs(money - price.get(tag - 1));
+//            System.out.println("Here is your refund: " + amount + " yuan");
+//            System.out.println("Thank you. Here is your ticket.");
+//            System.out.println("==========TICKET===========\n" +
+//                    "\t\tPrice: "+getPrice()+
+//                    "\n\t\tWelcome Back! ");
+//        }
+        amount = Math.abs(money - price.get(tag - 1));
+        if (amount != 0) {
             System.out.println("Here is your refund: " + amount + " yuan");
         }
+        System.out.println("Thank you. Here is your ticket.");
+        System.out.println("=======TICKET========\n" +
+                "This is your ticket to your place!"+
+                "\n\tprice:　" + getPrice() + "\t" +
+                "\n\tWelcome Back! ");
+
     }
 
     public static void main(String[] args) {
@@ -119,5 +136,7 @@ public class TicketMachine {
         double money = 0.0;
         money = in.nextDouble();
         t.insertMoney(money);
+
+
     }
 }

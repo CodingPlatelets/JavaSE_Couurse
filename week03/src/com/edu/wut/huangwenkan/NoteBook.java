@@ -55,12 +55,18 @@ public class NoteBook {
     }
 
     public static void main(String[] args) {
-        NoteBook notebook = new NoteBook();
-        notebook.add("abc");
-        notebook.add("def");
-        notebook.add("ghi");
-//        notebook.delete("abc");
-        notebook.getBook();
-        notebook.search(0);
+//        NoteBook notebook = new NoteBook();
+//        notebook.add("abc");
+//        notebook.add("def");
+//        notebook.add("ghi");
+////        notebook.delete("abc");
+//        notebook.getBook();
+//        notebook.search(0);
+        String s = "1 2 3 4 ";
+        String []ss = s.split(" ");
+        for (String m:ss) {
+            Double i = Double.valueOf(m);
+            System.out.print(i);
+        }
     }
 }
